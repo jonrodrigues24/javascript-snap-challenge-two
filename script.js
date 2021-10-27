@@ -3,6 +3,7 @@ let theArray = ['Bob', 'Jim', 'Matt', 'Mary', 'Suzy', 'Sarah'];
 
 
 createElement();
+namesMap();
 
 function createElement(){
 
@@ -25,4 +26,16 @@ function createElement(){
     // paragraph.appendChild(node);
 
 
+}
+
+
+
+function namesMap(){
+    let mySection = document.getElementById('map');
+
+
+    theArray.map(name => {
+        console.log(name)
+        mySection.innerHTML += "<p>" + name + "</p>"
+    })
 }
