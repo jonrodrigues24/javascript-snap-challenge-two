@@ -1,18 +1,28 @@
 let theArray = ['Bob', 'Jim', 'Matt', 'Mary', 'Suzy', 'Sarah'];
 
 
-theArray.forEach(createElement)
 
+createElement();
 
-function createElement(data){
+function createElement(){
 
-    const newCell = document.createElement('div');
-    newCell.classList.add("name");
+    let myList = document.getElementById('here')
 
-    const paragraph = document.createElement('p');
-    const node = document.createTextNode(data);
+    theArray.forEach(name => {
+        let li = document.createElement('li');
+        li.innerText = name;
 
-    paragraph.appendChild(node);
+        myList.appendChild(li);
+
+    })
+
+    // const newCell = document.createElement('div');
+    // newCell.classList.add("name");
+    //
+    // const paragraph = document.createElement('p');
+    // const node = document.createTextNode(data);
+    //
+    // paragraph.appendChild(node);
 
 
 }
